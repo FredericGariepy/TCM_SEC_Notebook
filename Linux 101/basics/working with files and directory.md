@@ -196,6 +196,29 @@ Note: that you **must** add `.tar` and `.gz` manually
 `gzip tarfile.tar`
 **>>** tarfile.tar.gz
 
+### `find`
+`find . -name 'file*.txt'
 
+Make sure you use glob inside a quote (`''` or `""`)
 
+Will return all .txt files starting with "file" in the directory and sub-directory.
 
+`-name` is is case sensitive. use `iname` for case-*insenstive* results.
+
+### `locate` (Uses databse updated daily by system cronjob)
+`locate file.txt` 
+
+Note: no need to specify starting point.
+
+### `which` 
+`which ls`
+
+Shows the absoulte path of the command to be executed.
+
+### `whereis` 
+
+`whereis ls`
+
+Shows the absoulte path of the command to be executed **and the executable file of the command**
+
+____
