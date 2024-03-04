@@ -77,7 +77,7 @@ e.g. using listing
 
 Will return all .type files starting with "file" and 0 or + followign characters
 
-`ls file?.type' 
+`ls file?.type`
 
 Will return all files with 1 character following "file"
 
