@@ -106,9 +106,29 @@ We can also direct standard out and error out to diffrent places:
 
 `find / -name 'secretsauce*' > secretformula.txt 2> /dev/null`
 
-## Pipes
+## Pipes `|`
+Pipes redirect the standard out to a standard in.
 
+Example: `ls /etc/ | head n-5` Will show the 5 first elements of the /etc/
 
+`history | less` Will show the command history using `less`
+
+## `history`
+`history` Will show the command history.
+
+`!-1` and `!!` will execute the last command in the history. This is often part of scripts to avoid repeating typing.
+
+`!cat` will execute the last `cat` command. !**anything** will execute the last anything.
+
+## `^ ^ ^` replace file of executed command (carrot)
+`!cat | tail`
+
+But, it executes on the wrong file 'oldfile'
+
+`^oldFile^newFile^` will change the file on which the previous commnad was executed.
+
+This can be used on any previously executed command, but it will not go back in time!
+This will simple re-execute the command but with a diffrent file.
 
 
 
