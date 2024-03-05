@@ -57,7 +57,7 @@ At /home/user `ls -al`, `.bashrc` The interactive non-login shell.
 
 `alias` is like a shortcut. Let's make our own!
 
-`alias del='rm -rfi' making our own alias called 'del' which will execute  `rm` with `rfi` flags, meaning it is reccursive forced and interactive (prompts for delete).
+`alias del='rm -rfi'` making our own alias called 'del' which will execute  `rm` with `rfi` flags, meaning it is reccursive forced and interactive (prompts for delete).
 
 
 
