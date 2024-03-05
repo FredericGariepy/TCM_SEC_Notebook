@@ -114,7 +114,7 @@ Example: `ls /etc/ | head n-5` Will show the 5 first elements of the /etc/
 `history | less` Will show the command history using `less`
 
 ## `history`
-`history` Will show the command history.
+`history` Will show the command history. The configs are stored in `.bashrc`. 
 
 `!-1` and `!!` will execute the last command in the history. This is often part of scripts to avoid repeating typing.
 
@@ -130,6 +130,6 @@ But, it executes on the wrong file 'oldfile'
 This can be used on any previously executed command, but it will not go back in time!
 This will simple re-execute the command but with a diffrent file.
 
-
-
-
+## Command Substitution ` `` ` backticks or $()
+The shell will execute everything isnide backticks ` `` ` or in `$(me first!)`
+___
