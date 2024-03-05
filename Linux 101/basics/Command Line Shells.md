@@ -58,12 +58,55 @@ At /home/user `ls -al`, `.bashrc` The interactive non-login shell.
 
 `alias` is like a shortcut. Let's make our own!
 
-`alias del='rm -rfi'` making our own alias called 'del' which will execute  `rm` with `rfi` flags, meaning it is reccursive forced and interactive (prompts for delete).
+**Making our own alias called 'del'**
 
+`alias del='rm -rfi'` 
 
+`del` will now execute `rm` with `rfi` flags, meaning it is reccursive forced and interactive (prompts for delete).
 
+Here's another alias where `c` will clear the screeen:
 
+`alias c='clear'
 
+To run our new aliases, we need to open a new shell so that the starup file takes effect.
+
+## Redirecting Input and Output `>` `>>` `<` `2>`
+**Standard In, Out, Error**
+
+### `>` redirect standard out.
+
+Example: `ls /etc/ > etc-content.txt`
+
+`ls / > etc-content.txt` This will over-write the 'etc-content.txt' file
+
+`>>` appends the standard out.
+
+`head /etc/passwd >> etc-content.txt` This will append the passwd file content to the etc-content.txt file.
+
+### `<`  standard in.
+
+Most commands that take a file name, also accept inuput from standard in.
+
+`head < /etc/passwd` and `head /etc/passwd` *have the same ouput.*
+
+**However!** in the first case, the whole 'passwd' file is fed to the head command, and in the second the head command *opens* the file to read the first 10 lines and then quit. (important later)
+
+### `2>` error out.
+`2>` redirect errors.
+
+Example: `find / -name 'sample.txt' 2> errors.txt` refirect errors to file.
+
+`find / -name 'sample.txt' 2> /dev/null` **/dev/null** is a blackhole in linux.
+
+`&>` redirect standard out and stardard error
+
+Example: `find / -name 'sample.txt' &> all.txt` redirect out and error to file. 
+
+We can also direct standard out and error out to diffrent places:
+
+`find / -name 'secretsauce*' > secretformula.txt 2> /dev/null`
+
+## Pipes
 
 
 
