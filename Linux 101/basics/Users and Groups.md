@@ -86,18 +86,17 @@ Another way,
 
 ### `chown` Change owner | `chgrp` Change group
 Example: `sudo chown user file.txt`  Change user ownership
+
 Example: `sudo chgrp group file.txt` Change group ownership
 
+### `sudo` Super User | `su` Changing Users
+`sudo` Super User DO , 1 command executed as root.
 
+`sudo -u user command...` 1 command executed as user.
 
+`su user` switch user
 
+### `passwd` Changing Passwords
+`passwd` to change user's *own* password.
 
-
-
-
-
-
-
-
-
-
+`sudo passwd user` elevate priviledge to change other user's password.
