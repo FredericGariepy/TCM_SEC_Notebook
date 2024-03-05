@@ -130,6 +130,6 @@ But, it executes on the wrong file 'oldfile'
 This can be used on any previously executed command, but it will not go back in time!
 This will simple re-execute the command but with a diffrent file.
 
-## Command Substitution ` `` ` backticks or $()
+## Command Substitution ` `` ` backticks or `$()`
 The shell will execute everything isnide backticks ` `` ` or in `$(me first!)`
 ___
