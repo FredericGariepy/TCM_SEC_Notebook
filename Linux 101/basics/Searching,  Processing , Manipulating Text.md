@@ -61,6 +61,15 @@ Use the `-F 'delimiter type'` to chose delimiter type.
 
 `echo I love you | awk '{print $1, $2, "doritos"!}'` **>>** I love doritos!
 
+`cat /var/log/auth.log | awk '/Feb/ {print NR, $4}'` Will output the line number (`NR`) and 4th delimited element (here it's the Host name) for every record containing /Feb/. 
+
+## `tr` (translate) 
+`tr` takes standard Input and gives out Standard out
+
+`tr 'replace-me' 'with-this'`
+
+
+
 
 
 
