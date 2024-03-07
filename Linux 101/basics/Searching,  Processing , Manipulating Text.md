@@ -66,7 +66,17 @@ Use the `-F 'delimiter type'` to chose delimiter type.
 ## `tr` (translate) 
 `tr` takes standard Input and gives out Standard out
 
-`tr 'replace-me' 'with-this'`
+`tr 'replace-me' 'with-this'` This relacement is "global"
+
+examples: 
+
+`cat ex.txt | tr '1' '2'` Replaces all the standard-out 1s with 2s.
+
+`cat ex.txt | tr 'a-z' 'A-Z'` Replaces all lowercase to Upppercase.
+
+OR
+
+`cat ex.txt | tr '[:lower:]' '[:upper:]'` Also replaces all lowercase to Upppercase.
 
 
 
