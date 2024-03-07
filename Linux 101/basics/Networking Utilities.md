@@ -25,3 +25,5 @@
 `netstat -at` Current network connection and statistics.
 
 `netstat -lt` Listening TCP ports
+
+`ip neigh` View the neighbor table, information about devices on the local network.
