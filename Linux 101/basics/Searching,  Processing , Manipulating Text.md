@@ -10,6 +10,11 @@
 
 Note: check the `grep --help` for more options.
 
+### `grep` with regex
+`grep -E '^4[2-9]|[5-9][0-9]|[0-9]{3,}$' numbers.txt`
+
+Searches numbers.txt for lines with number >=42
+
 ## `sort`
 `sort file.txt` returns sorted file, use `-r` for reserve order. See man pages.
 
