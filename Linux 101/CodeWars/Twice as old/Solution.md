@@ -17,11 +17,3 @@ _($1-x/$2-x) = 2_
 x = ( 2 * $2 ) - $1
 
 return |x|
-
-```
-#!/bin/bash
-dad_years_old=$1
-son_years_old=$2
-years=$(( ( $2 * 2 ) - $1 )) # solving linear equation
-echo $((years < 0 ? -years : years)) # echo Absolute value
-```
