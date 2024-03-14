@@ -1,5 +1,5 @@
 # Reading and writing files
-## Opening files, `open(filename.txt)`
+## Opening files, `open(filename.txt)` | `with open(file.txt)` as f:`
 `f =  open('hello.txt')`
 
 `print(f)`
@@ -9,6 +9,15 @@ __>>>__
 <_io.TextIOWrapper name='hello.txt' mode='r' encoding='UTF-8'>
 
 As we can see from the stdout the default mode is `r` for read, and encoding is `UTF-8`.
+
+Using `with` to open a file to indents the open action.
+
+Notice as well that here I've specified the encoding.
+```
+with open('data.txt', encoding='latin-1') as f:
+    for l in f:
+         print(l.strip())
+```
 ### File information `f.name` `f.closed` `f.mode`
 `f.name` Returns the file that is open
 
@@ -43,10 +52,14 @@ for line in f:
     print(line.strip())
 ```
 ### Write file, `.write()` 
+Don't forget to to close 
 ```
 f = open('newfile.txt', 'w')
 f.write('new line')
 f.close()
+
+# here is a safeguard too:
+if not f.closed:
+    f.close()
+
 ```
-
-
