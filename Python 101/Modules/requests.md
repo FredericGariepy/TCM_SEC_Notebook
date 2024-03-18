@@ -19,7 +19,7 @@ Make HTTP requests with the [requests module](https://requests.readthedocs.io/en
 | request with params as dict |`.get('url',params={'key':'val}` | requests.get('http://https://httpbin.org/get', params={'id':1} ) |
 | request with headers as dict|`.get('url',headers={'key':'val}`| requests.get('http://https://httpbin.org/get', headers={'Accept':'application/json', 'evil':'intentions'}) |
 | delete | `.delete('url')` | 'r.delete(http://https://httpbin.org/delete') |
-| post | '.post('url')` | r.post(http://https://httpbin.org/post', data={'data':123, 'data2':456}) |
+| post | `.post('url')` | r.post(http://https://httpbin.org/post', data={'data':123, 'data2':456}) |
 | response as JSON | `.json()` | After request r is made, r.json() |
 
 #### Sending multi-part encoded files
