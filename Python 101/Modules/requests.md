@@ -24,13 +24,11 @@ Make HTTP requests with the [requests module](https://requests.readthedocs.io/en
 
 #### Sending multi-part encoded files
 `wget` image
-```
-# bash
+```bash
 wget url/resource/endpoint -0 filename
 ```
 post image with python requests
-```
-# python
+```python
 files = {'file': open('img.png': 'rb')} # rb = read bytes
 r = requests.post('url', file = files)
 ```
@@ -38,7 +36,7 @@ r = requests.post('url', file = files)
 `r.get('url', auth=('username','password'))`
 
 __output:__
-```
+```bash
 print(r.text)
 {
   "args": {},
@@ -78,7 +76,7 @@ _Opens up request to get MIM'd_
 
 #### 301 Redirects, `allow_redirects=False`
 Request will perform redirections for all verbs, except HEAD.
-```
+```python
 rd = requests.get('http://github.com',allow_redirects=False)
 rd.headers
 >>> {'Content-Length': '0', 'Location': 'https://github.com/'}
@@ -90,20 +88,20 @@ r.status_code
 `r = requests.get(https://github.com',timeout=0.01)`
 
 __Output:__
-```
+```bash
 requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='github.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<urllib3.connection.VerifiedHTTPSConnection object at 0x7f95268e2d30>, 'Connection to github.com timed out. (connect timeout=0.01)'))
 ```
 #### Statefull request, perssist data, session.
 ##### With cookies (cummbersome)
 `c = requests.get('https://httpbin.org/cookies', cookies={'a': 'b'})`
 ##### With Sessions
-```
+```python
 s =  requests.Session()
 s.cookies.update({'a':'b'})
 s.get('https://httpbin.org/cookies')
 ```
 #### download and save to disk
-```
+```python
 x  = requests.get('url/path/to/resource')
 with open(file.type, 'wb') as f: # wb =  write bytes
     f.write(x.content)
