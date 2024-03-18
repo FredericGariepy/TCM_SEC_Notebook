@@ -2,7 +2,7 @@
 
 Use `import sys` to get started. Notice there is no need to write `from`.
 
-```
+```python
 import sys
 
 print('version:'+sys.version)
