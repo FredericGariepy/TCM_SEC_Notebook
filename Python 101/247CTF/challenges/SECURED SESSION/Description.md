@@ -41,5 +41,6 @@ There's a few things happening here, but the most important is:
 ```python
 session['flag'] = flag
 ```
-This means that our flag is stored in our session cookies.
+This means that our flag is stored in our session.
+
 
