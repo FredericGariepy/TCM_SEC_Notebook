@@ -44,11 +44,19 @@ session['flag'] = flag
 This means that our flag is stored in our session.
 <img src="https://github.com/FredericGariepy/TCM_SEC_Notebook/blob/main/Python%20101/247CTF/images/Screenshot%202024-03-24%20035418.jpg" alt="Finding session flag">
 
-We can now use __bash__ to decode the flag
+We can now use __bash__ to decode the flag, just trying out base64 decode
 
 ```bash
 echo "eyJmbGFnIjp7IiBiIjoiTWpRM1ExUkdlMlJoT0RBM09UVm1PR0UxWTJGaU1tVXdNemRrTnpNNE5UZ3dOMkk1WVRreGZRPT0ifX0.Zf_XgQ.OHh3vha9LHywudl-xRMC9QlkZC0" | base64 -d
 ```
 
-> {"flag":{" b":"MjQ3Q1RGe2RhODA3OTVmOGE1Y2FiMmUwMzdkNzM4NTgwN2I5YTkxfQ=="}} 
+> {"flag":{" b":"MjQ3Q1RGe2RhODA3OTVmOGE1Y2FiMmUwMzdkNzM4NTgwN2I5YTkxfQ=="}}base64: invalid input
+I see that we get a flag JSON object and I believe the 'b' stands for bytes.. 
 
+So let us try base64 decode the value given..
+```bash
+ echo "MjQ3Q1RGe2RhODA3OTVmOGE1Y2FiMmUwMzdkNzM4NTgwN2I5YTkxfQ==" | base64
+-d
+```
+We finally get:
+> 247CTF{da80795f8a5cab2e037d7385807b9a91}
