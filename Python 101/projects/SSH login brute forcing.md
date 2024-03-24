@@ -1,4 +1,4 @@
-This is a stupid simple bruteforce attack.
+This is a simple bruteforce attack.
 
 We're going through a password list and making shh connections untill
 
