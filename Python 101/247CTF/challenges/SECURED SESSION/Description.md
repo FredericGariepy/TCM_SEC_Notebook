@@ -42,5 +42,5 @@ There's a few things happening here, but the most important is:
 session['flag'] = flag
 ```
 This means that our flag is stored in our session.
-
+<img src="https://github.com/FredericGariepy/TCM_SEC_Notebook/blob/main/Python%20101/247CTF/images/Screenshot%202024-03-24%20035418.jpg" alt="Finding session flag">
 
