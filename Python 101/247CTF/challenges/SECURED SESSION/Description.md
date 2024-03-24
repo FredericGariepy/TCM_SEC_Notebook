@@ -3,7 +3,7 @@
 If you can guess our random secret key, we will tell you the flag securely stored in your session.
 ___
 ### Solution
-When hitting `https://1615f3b2ae1a7743.247ctf.com/` we see some python flask code:
+When hitting `https://1615f3b2ae1a7743.247ctf.com/` we see some __python flask__ code:
 ```python
 import os
 from flask import Flask, request, session
@@ -43,4 +43,12 @@ session['flag'] = flag
 ```
 This means that our flag is stored in our session.
 <img src="https://github.com/FredericGariepy/TCM_SEC_Notebook/blob/main/Python%20101/247CTF/images/Screenshot%202024-03-24%20035418.jpg" alt="Finding session flag">
+
+We can now use __bash__ to decode the flag
+
+```bash
+echo "eyJmbGFnIjp7IiBiIjoiTWpRM1ExUkdlMlJoT0RBM09UVm1PR0UxWTJGaU1tVXdNemRrTnpNNE5UZ3dOMkk1WVRreGZRPT0ifX0.Zf_XgQ.OHh3vha9LHywudl-xRMC9QlkZC0" | base64 -d
+```
+
+> {"flag":{" b":"MjQ3Q1RGe2RhODA3OTVmOGE1Y2FiMmUwMzdkNzM4NTgwN2I5YTkxfQ=="}} 
 
