@@ -1,4 +1,4 @@
-Another stupid simple script, pwn Tools is not necessary here... log just make it look cool.
+A simple script, I think pwn Tools is not necessary here... log just make it look clean.
 
 Were basically going though a list and encoding each word until it's hash corresponds to the hash we are looking for..
 
