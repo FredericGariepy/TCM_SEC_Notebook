@@ -1,4 +1,6 @@
 ### A generator is a function that returns an iterator
+Generators are used in memory-intensive exec. They are lazy executors.
+
 It produces a sequence of values iterated over which we can `yeild`.
 We can use the `next()` function to capture the value returned by a `yeild`.
 ```python
