@@ -12,3 +12,5 @@ or process injection (injecting malicious code into a legitimate process).
 #### functions can be used for malware memory allocation detection
 API Hooking:
 Hook memory allocation functions like `VirtualAlloc` but might overlook `NtAllocateVirtualMemory` calls.
+
+### Notice: Undocumented API calls can be changed by windows updates without notice.
