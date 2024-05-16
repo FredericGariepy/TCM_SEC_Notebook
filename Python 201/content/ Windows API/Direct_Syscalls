@@ -1,0 +1,16 @@
+'''
+At the lowest level, we have machine code which is just 1s and 0s.
+Next, level up is Assembly. A low level programing language. 
+Works directly with registers and interupts.
+Each line (usually) translate to one processor intruction.
+Diffrent processors use different assemby code.
+
+# SysCalls
+Every native API call has a specific syscall number
+Move the number into -> registers ->  in x64 the syscall intruction will enter kernel mode
+
+LETS ALLOCATE MEMORY WITH SYSCALLS AND AVOID THE WIN32 API (KERNEL32 and NT)
+'''
+
+# https://j00ru.vexillium.org/syscalls/nt/32/
+# Check windows version ⊞ + R : 'winver'
