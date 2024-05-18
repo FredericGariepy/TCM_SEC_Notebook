@@ -11,6 +11,8 @@ Open up Putty to test the connection
 | Post | 8080 |
 | Connection type | Raw |
 | Close window on exit | Never |
+| Putty Console | ![image](https://github.com/FredericGariepy/TCM_SEC_Notebook/assets/96602008/ce638a61-ec1d-421b-a225-bd715a1f7629) |
+
 
 ### In wireshark the server - client connection can be shown in the packet sniffer
 ![image](https://github.com/FredericGariepy/TCM_SEC_Notebook/assets/96602008/f54009e4-7b02-4b91-945d-85a1064e0003)
