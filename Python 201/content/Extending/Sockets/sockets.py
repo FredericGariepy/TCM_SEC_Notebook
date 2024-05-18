@@ -25,10 +25,10 @@ def socket_demo():
 
 #socket_demo()
 
-choice = input('Client = 1 \nServer = 2 \nWhat do you want to run? (1 or 2): ')
+choice = input('Client = 1 \nServer = 2 \nPort Scanner = 3\nWhat do you want to run? (1 , 2 , 3): ')
 
-while (choice != '1') and (choice != '2'):
-    choice = input('Client = 1 \nServer = 2 \nWhat do you want to run? (1 or 2): ')
+while (choice != '1') and (choice != '2') and (choice != '3'):
+    choice = input('Client = 1 \nServer = 2 \nPort Scanner = 3\nWhat do you want to run? (1 , 2 , 3): ')
 
 client = False
 server = False
@@ -46,6 +46,7 @@ s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 print
 # Run a server
 if server:
+    print("Server is starting up.")
     # bind socket to speciffied adress
     s.bind((local_host, port))
     s.listen()
@@ -64,3 +65,16 @@ if client:
     s.connect((local_host,port))
     print(s.recv(1024))
     s.close()
+
+#port scanner
+if choice == '3':
+    print("Scanning on host:{}".format(local_host))
+    for port in [22,80,129,443,445,8080]:
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        socket.setdefaulttimeout(1)
+        result = s.connect_ex((local_host,port))
+        if result == 0:
+            print("port:{} is open!".format(port))
+        else:
+            print("port:{} is closed!".format(port))
+        s.close()
