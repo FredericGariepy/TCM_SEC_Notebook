@@ -1,4 +1,4 @@
-#### Run the socket.py demo file to open a server or a client (2 or 1)
+#### Run the socket.py demo file to open: Client, Server or Port Scanner
 `netstat -an`
 
 Find the socket listening (waiting for connections)
